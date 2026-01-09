@@ -6,18 +6,18 @@ WORKDIR /build
 COPY jobs ./jobs
 
 # Copy the importer
-COPY importers/railway-importer ./importers/railyway-second-importer
+COPY importers/railyway-second-importer ./importers/railyway-second-importer
 
-WORKDIR /build/importers/railway-importer
+WORKDIR /build/importers/railyway-second-importer
 
 # Download dependencies and build
 RUN go mod download
-RUN CGO_ENABLED=0 GOOS=linux go build -o /railway-importer .
+RUN CGO_ENABLED=0 GOOS=linux go build -o /railyway-second-importer .
 
 # Final stage
 FROM alpine:3.19
 
 # Copy the compiled binary
-COPY --from=builder /railway-importer /railway-importer
+COPY --from=builder /railyway-second-importer /railyway-second-importer
 
-CMD ["/railway-importer"]
+CMD ["/railyway-second-importer"]
