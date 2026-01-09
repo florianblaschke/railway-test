@@ -6,7 +6,7 @@ WORKDIR /build
 COPY jobs ./jobs
 
 # Copy the importer
-COPY importers/railway-importer ./importers/railway-importer
+COPY importers/railway-importer ./importers/railyway-second-importer
 
 WORKDIR /build/importers/railway-importer
 
