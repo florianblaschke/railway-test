@@ -2,9 +2,7 @@
 
 [[services]]
 name = "railway-importer"
-rootDirectory = "importers/railway-importer"
 dockerfilePath = "importers/railway-importer/Dockerfile"
-dockerContext = "."
 
 # Cron schedule: Run every 5 minutes
 cronSchedule = "*/5 * * * *"
