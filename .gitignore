@@ -1,0 +1,41 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Compiled Go binaries (ignore these specific binary names)
+
+importer-a
+importer-b
+importer-c
+
+# Go workspace file
+go.work
+
+# Dependency directories
+vendor/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Railway specific
+.railway/
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
+tmp/
+temp/

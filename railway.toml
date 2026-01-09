@@ -1,0 +1,17 @@
+# Railway Configuration for Railway Test Importers
+
+[[services]]
+name = "railway-importer"
+rootDirectory = "importers/railway-importer"
+dockerfilePath = "importers/railway-importer/Dockerfile"
+dockerContext = "."
+
+# Cron schedule: Run every 5 minutes
+cronSchedule = "*/5 * * * *"
+
+# Watch these directories for changes to trigger redeployment
+watch = ["jobs/**", "importers/railway-importer/**"]
+
+# Environment variables (if needed)
+# [services.env]
+# LOG_LEVEL = "info"
